@@ -1,12 +1,12 @@
 package 
 {
-	
 	import com.github.wujinhong.NormalBackground;
 	
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
+	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
 	import flash.text.TextFieldType;
@@ -20,6 +20,7 @@ package
 	{
 		public var inputTxt:TextField;
 		public var theBg:com.github.wujinhong.NormalBackground;
+		[Bindable]
 		private var initPos:int = 10;
 		public function Main()
 		{
@@ -63,7 +64,6 @@ package
 			inputTxt.type = TextFieldType.INPUT;
 			
 			inputTxt.x = theBg.x + 4;
-			
 			inputTxt.y = theBg.y + 4;
 			
 			inputTxt.width = 292;
@@ -74,6 +74,12 @@ package
 			
 			addChild(inputTxt);
 			inputTxt.addEventListener(Event.CHANGE, resetTheBg);
+			stage.addEventListener( MouseEvent.CLICK, onClick );
+		}
+		
+		protected function onClick(e:MouseEvent):void
+		{
+			initPos++;
 		}
 		private function resetTheBg(e:Event):void 
 		{
