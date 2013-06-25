@@ -19,12 +19,8 @@ package
 	public class Main extends Sprite 
 	{
 		public var inputTxt:TextField;
-		
 		public var theBg:com.github.wujinhong.NormalBackground;
-		
-		
 		private var initPos:int = 10;
-		
 		public function Main()
 		{
 			super();
