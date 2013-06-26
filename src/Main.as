@@ -13,7 +13,7 @@ package
 	
 	/**
 	 * 9宫格应用举例-随输入变化的文本底板
-	 * @author Tiger 1748055943@qq.com
+	 * @author Tiger 597785841@qq.com
 	 * 2012/11/16 10:22
 	 */
 	public class Main extends Sprite 
@@ -21,7 +21,7 @@ package
 		public var inputTxt:TextField;
 		public var theBg:com.github.wujinhong.NormalBackground;
 		[Bindable]
-		private var initPos:int = 10;
+		private var initPos:int = 100;
 		public function Main()
 		{
 			super();
